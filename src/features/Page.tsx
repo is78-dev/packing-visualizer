@@ -8,6 +8,13 @@ const Page: React.FC = () => {
         <a href="/" className="text-2xl m-4">
           Packing Visualizer
         </a>
+        <a
+          href="https://github.com/is78-dev/packing-visualizer"
+          target="_blank"
+          className="absolute right-2"
+        >
+          <img src="/github-mark-white.png" alt="github" className="h-6" />
+        </a>
       </div>
       <Visualizer />
     </div>
