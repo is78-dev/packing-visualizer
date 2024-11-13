@@ -13,7 +13,11 @@ const Page: React.FC = () => {
           target="_blank"
           className="absolute right-2"
         >
-          <img src="/github-mark-white.png" alt="github" className="h-6" />
+          <img
+            src="./assets/github-mark-white.png"
+            alt="github"
+            className="h-6"
+          />
         </a>
       </div>
       <Visualizer />
