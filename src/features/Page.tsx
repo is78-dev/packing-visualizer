@@ -5,7 +5,7 @@ const Page: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col">
       <div className="flex justify-center items-center border-b">
-        <a href="/" className="text-2xl m-4">
+        <a href="." className="text-2xl m-4">
           Packing Visualizer
         </a>
         <a
