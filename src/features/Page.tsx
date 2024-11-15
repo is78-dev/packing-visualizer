@@ -11,7 +11,7 @@ const Page: React.FC = () => {
         <a
           href="https://github.com/is78-dev/packing-visualizer"
           target="_blank"
-          className="absolute right-2"
+          className="absolute right-4"
         >
           <img
             src="./assets/github-mark-white.png"
