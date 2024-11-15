@@ -2,9 +2,10 @@ import React from "react";
 
 type Props = {
   setData: React.Dispatch<React.SetStateAction<number[][] | null>>;
+  fileNameRef: React.MutableRefObject<string>;
 };
 
-const FileInput: React.FC<Props> = ({ setData }) => {
+const FileInput: React.FC<Props> = ({ setData, fileNameRef }) => {
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
@@ -27,6 +28,7 @@ const FileInput: React.FC<Props> = ({ setData }) => {
       };
 
       reader.readAsText(file);
+      fileNameRef.current = file.name.replace(/\.[^/.]+$/, "");
     }
   };
 

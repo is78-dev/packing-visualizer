@@ -12,13 +12,14 @@ const Visualizer: React.FC = () => {
   const [canvasWidth, setCanvasWidth] = useState<number>(500);
   const [canvasHeight, setCanvasHeight] = useState<number>(500);
   const [canvasScale, setCanvasScale] = useState<number>(10);
+  const fileNameRef = useRef<string>("");
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   return (
     <div className="flex flex-1">
       <div className="flex flex-col gap-4 p-4 border-r min-h-full">
-        <FileInput setData={setData} />
-        <DownloadImageButton canvasRef={canvasRef} />
+        <FileInput setData={setData} fileNameRef={fileNameRef} />
+        <DownloadImageButton canvasRef={canvasRef} fileNameRef={fileNameRef} />
         <ModeSelect mode={mode} setMode={setMode} />
         <Slider
           name={"Width"}
