@@ -39,7 +39,7 @@ const Canvas: React.FC<Props> = ({
     context.font = `${fontSize}px Arial`;
     context.textAlign = "center";
     context.textBaseline = "middle";
-    const canvasCoord = (x: number, y: number, w: number, h: number) => {
+    const canvasCoord = (w: number, h: number, x: number, y: number) => {
       const cw = w * canvasScale;
       const ch = h * canvasScale;
       const cx = x * canvasScale + canvasMargin;
@@ -55,10 +55,10 @@ const Canvas: React.FC<Props> = ({
     try {
       for (let i = 0; i < data[0][0]; i++) {
         const module = canvasCoord(
-          data[i + 1][0],
-          data[i + 1][1],
-          data[i + 1][2],
-          data[i + 1][3]
+          data[i + 1][0], // 幅
+          data[i + 1][1], // 高さ
+          data[i + 1][2], // X座標
+          data[i + 1][3] // Y座標
         );
         if (mode === "pre-placed") {
           if (i < data[0][1]) {

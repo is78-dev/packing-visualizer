@@ -7,34 +7,34 @@
 標準的な描画モード
 
 - モジュール数：M
-- モジュール i の XY 幅高： Mx_i, My_i, Mw_i, Mh_i
+- モジュール i の幅高 XY： Mw_i, Mh_i, Mx_i, My_i
 
 ```
 M
-Mx_1 My_1 Mw_1 Mh_1
-Mx_2 My_2 Mw_2 Mjh_2
+Mw_1 Mh_1 Mx_1 My_1
+Mw_2 Mh_2 Mx_2 My_2
 ...
-Mx_M My_M Mw_M Mh_M
+Mw_M Mh_M Mx_M My_M
 ```
 
 ### pre-placed モード
 
-pre-placed module を灰色で表示するモード
+pre-placed モジュールを灰色で表示するモード
 
 - モジュール数：M
-- プリプレースモジュール数：P
-- フリーモジュール数：F
-- プリプレースモジュール i の XY 幅高： Px_i, Py_i, Pw_i, Ph_i
-- フリーモジュール i の XY 幅高： Fx_i, Fy_i, Fw_i, Fh_i
+- pre-placed モジュール数：P
+- free モジュール数：F
+- pre-placed モジュール i の幅高 XY： Pw_i, Ph_i, Px_i, Py_i,
+- free モジュール i の幅高 XY： Fw_i, Fh_i, Fx_i, Fy_i
 
 ```
 M P F
-Px_1 Py_1 Pw_1 Ph_1
-Px_2 Py_2 Pw_2 Ph_2
+Pw_1 Ph_1 Px_1 Py_1
+Pw_2 Ph_2 Px_2 Py_2
 ...
-Px_P Py_P Pw_P Ph_P
-Fx_1 Fy_1 Fw_1 Fh_1
-Fx_2 Fy_2 Fw_2 Fh_2
+Pw_P Ph_P Px_P Py_P
+Fw_1 Fh_1 Fx_1 Fy_1
+Fw_2 Fh_2 Fx_2 Fy_2
 ...
-Fx_F Fy_F Fw_F Fh_F
+Fw_F Fh_F Fx_F Fy_F
 ```
